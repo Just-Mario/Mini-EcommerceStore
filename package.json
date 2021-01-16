@@ -4,9 +4,12 @@
   "description": "Mern shopping",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client":"npm start --prefix frontend",
+    "dev":" concurrently \"npm run server\" \"npm run client\""
   },
-  "repository": {
+  "repository": { 
     "type": "git",
     "url": "git+https://github.com/Just-Mario/Mini-EcommerceStore.git"
   },
@@ -17,8 +20,10 @@
   },
   "homepage": "https://github.com/Just-Mario/Mini-EcommerceStore#readme",
   "dependencies": {
-    "concurrently": "^5.3.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+  "nodemon": "^2.0.7",
+  "concurrently": "^5.3.0"
   }
 }
