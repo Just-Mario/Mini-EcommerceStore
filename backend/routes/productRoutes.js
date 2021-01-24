@@ -1,11 +1,12 @@
 import express from 'express';
-import asyncHandler from 'express-async-handler';
 import Product from '../models/productModel.js';
+import asyncHandler from 'express-async-handler';
+
 const router = express.Router();
 
-//@desc Fetch all products
-//@route Get /api/products
-//@access Public
+//Desc Fetch all products
+//Route GET /api/products
+//Access Public
 router.get(
 	'/',
 	asyncHandler(async (req, res) => {
@@ -15,9 +16,9 @@ router.get(
 	})
 );
 
-//@desc Fetch single product
-//@route Get /api/product/:id
-//@access Public
+//Desc Fetch single product
+//Route GET /api/products/:id
+//Access Public
 router.get(
 	'/:id',
 	asyncHandler(async (req, res) => {

@@ -2,7 +2,7 @@
   "name": "cyber-store",
   "type": "module",
   "version": "1.0.0",
-  "description": "Mern shopping cart application",
+  "description": "MERN shopping cart application",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server",

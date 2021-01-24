@@ -18,7 +18,7 @@ app.use('/api/products', productRoutes);
 
 //Test
 app.get('/', (req, res) => {
-	app.res('API is running...');
+	res.send('API is running...');
 });
 
 //Application confirmation rendering.
