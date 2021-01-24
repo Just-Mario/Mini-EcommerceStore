@@ -7,6 +7,9 @@ import colors from 'colors';
 //Requesting ConnectDB from DB.JS.
 import connectDB from './config/db.js';
 
+//
+import { notFound, errorHandler } from './middleware/errorMiddleware.js';
+
 //request ProductRoutes
 import productRoutes from './routes/productRoutes.js';
 
@@ -16,6 +19,9 @@ const app = express();
 
 app.use('/api/products', productRoutes);
 
+app.use(notFound);
+
+app.use(errorHandler);
 //Test
 app.get('/', (req, res) => {
 	res.send('API is running...');

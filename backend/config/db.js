@@ -8,7 +8,7 @@ const connectDB = async () => {
 			useCreateIndex: true,
 		});
 		console.log(
-			`MongoDB Connected: ${conn.connection.host}`.cyan.bold.underline
+			`MongoDB Connected: ${conn.connection.host}`.yellow.bold.underline
 		);
 	} catch (error) {
 		console.log(`error: ${error.message}`.red.bold);
